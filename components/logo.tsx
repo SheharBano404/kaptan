@@ -35,7 +35,7 @@ export function Logo({ className }: { className?: string }) {
           data-text="KAPTAN"
           className="logo-glitch font-display text-xl uppercase tracking-[0.05em] text-bone
             [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
-            sm:text-2xl sm:tracking-[0.05em]"
+            sm:text-8xl sm:tracking-[1em]"
         >
           KAPTAN
         </span>
