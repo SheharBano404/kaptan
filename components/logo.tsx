@@ -19,8 +19,10 @@ export function Logo({ className }: { className?: string }) {
         />
       </span>
       <span className="flex flex-col leading-none">
-        <span className="font-display text-lg tracking-tight">KAPTAN</span>
-        <span className="text-[10px] font-semibold uppercase tracking-ultra text-bone-dim">
+        <span className="font-display text-2xl tracking-tight text-bone [text-shadow:0_0_12px_theme(colors.blood.glow),0_0_24px_theme(colors.blood.DEFAULT)] transition-[text-shadow] duration-300 group-hover:[text-shadow:0_0_18px_theme(colors.blood.glow),0_0_36px_theme(colors.blood.glow),0_0_54px_theme(colors.blood.DEFAULT)]">
+          KAPTAN
+        </span>
+        <span className="text-xs font-semibold uppercase tracking-ultra text-blood-glow">
           Leather
         </span>
       </span>
