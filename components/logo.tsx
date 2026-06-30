@@ -30,18 +30,18 @@ export function Logo({ className }: { className?: string }) {
         <span className="logo-scan pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-blood-glow/0 via-blood-glow/40 to-blood-glow/0" />
       </span>
 
-      <span className="flex flex-col leading-[0.85]">
+      <span className="flex flex-col items-stretch leading-[0.85]">
         <span
           data-text="KAPTAN"
-          className="logo-glitch font-display text-3xl uppercase tracking-tight text-bone
+          className="logo-glitch font-display text-xl uppercase tracking-tight text-bone
             [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
-            sm:text-5xl"
+            sm:text-3xl"
         >
           KAPTAN
         </span>
         <span
-          className="mt-2.0 inline-block w-fit border border-blood-glow/70 bg-blood
-            px-2.5 py-1.5 text-[15px] font-bold uppercase tracking-ultra text-white
+          className="mt-2 inline-block w-full border border-blood-glow/70 bg-blood/90
+            px-2.5 py-0.5 text-center text-[10px] font-bold uppercase tracking-ultra text-white
             transition-colors duration-200 group-hover:bg-blood-glow"
         >
           Leather
