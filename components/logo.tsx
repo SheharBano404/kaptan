@@ -30,7 +30,7 @@ export function Logo({ className }: { className?: string }) {
         <span className="logo-scan pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-blood-glow/0 via-blood-glow/40 to-blood-glow/0" />
       </span>
 
-      <span className="flex flex-col items-stretch leading-[1.85]">
+      <span className="flex flex-col items-stretch leading-[1]">
         <span
           data-text="KAPTAN"
           className="logo-glitch font-display text-xl uppercase tracking-[0.05em] text-bone
