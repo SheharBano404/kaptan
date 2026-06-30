@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-bone font-sans antialiased;
+  background-image: radial-gradient(
+      1200px 600px at 70% -10%,
+      rgba(193, 18, 31, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(900px 500px at 0% 100%, rgba(200, 160, 74, 0.06), transparent 55%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: theme("colors.blood.DEFAULT");
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a31;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.blood.DEFAULT");
+}
+
+@layer components {
+  .container-kl {
+    @apply mx-auto w-full max-w-[1400px] px-5 sm:px-8;
+  }
+
+  .display {
+    @apply font-display uppercase leading-[0.92] tracking-tight;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-ultra text-bone-dim;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm
+      font-semibold uppercase tracking-wider transition-all duration-200 disabled:opacity-50
+      disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-blood text-white hover:bg-blood-glow hover:shadow-[0_0_30px_-6px_theme(colors.blood.glow)];
+  }
+  .btn-light {
+    @apply btn bg-bone text-ink hover:bg-white;
+  }
+  .btn-ghost {
+    @apply btn border border-ink-line bg-transparent text-bone hover:border-bone hover:bg-white/5;
+  }
+
+  .field {
+    @apply w-full rounded-lg border border-ink-line bg-ink-soft px-4 py-3 text-sm text-bone
+      placeholder:text-bone-dim/60 outline-none transition focus:border-blood focus:ring-1
+      focus:ring-blood/40;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wider text-bone-dim;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-ink-line bg-ink-card;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0
+      after:bg-blood after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+/* hide number input spinners */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

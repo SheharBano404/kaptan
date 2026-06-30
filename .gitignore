@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.env
+.env*.local
+.vercel
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+/.data
+
+# Original WhatsApp reference photos (cleaned copies live in public/products)
+/Reference material/
