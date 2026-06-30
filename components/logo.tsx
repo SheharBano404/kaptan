@@ -33,9 +33,9 @@ export function Logo({ className }: { className?: string }) {
       <span className="flex flex-col items-stretch leading-[0.85]">
         <span
           data-text="KAPTAN"
-          className="logo-glitch font-display text-xl uppercase tracking-wider text-bone
+          className="logo-glitch font-display text-xl uppercase tracking-[0.12em] text-bone
             [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
-            sm:text-3xl sm:tracking-widest"
+            sm:text-3xl sm:tracking-[0.2em]"
         >
           KAPTAN
         </span>
