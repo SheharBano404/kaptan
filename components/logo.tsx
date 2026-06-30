@@ -20,7 +20,7 @@ export function Logo({ className }: { className?: string }) {
           group-hover:-rotate-2"
       >
         <Image
-          src="/products/spiked-rebel.jpeg"
+          src="/products/logo.png"
           alt="Kaptan Leather"
           fill
           sizes="56px"
