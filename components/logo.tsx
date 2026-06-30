@@ -41,7 +41,7 @@ export function Logo({ className }: { className?: string }) {
         </span>
         <span
           className="mt-2 inline-block w-full border border-blood-glow/70 bg-blood/90
-            px-2.5 py-0.5 text-center text-[10px] font-bold uppercase tracking-ultra text-white
+            px-12.5 py-0.5 text-center text-[10px] font-bold uppercase tracking-ultra text-white
             transition-colors duration-200 group-hover:bg-blood-glow"
         >
           Leather
