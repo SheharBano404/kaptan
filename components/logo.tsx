@@ -33,15 +33,15 @@ export function Logo({ className }: { className?: string }) {
       <span className="flex flex-col leading-[0.85]">
         <span
           data-text="KAPTAN"
-          className="logo-glitch font-display text-4xl uppercase tracking-tight text-bone
+          className="logo-glitch font-display text-3xl uppercase tracking-tight text-bone
             [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
             sm:text-5xl"
         >
           KAPTAN
         </span>
         <span
-          className="mt-1.5 inline-block w-fit border border-blood-glow/70 bg-blood
-            px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-ultra text-white
+          className="mt-2.0 inline-block w-fit border border-blood-glow/70 bg-blood
+            px-2.5 py-1.5 text-[15px] font-bold uppercase tracking-ultra text-white
             transition-colors duration-200 group-hover:bg-blood-glow"
         >
           Leather
