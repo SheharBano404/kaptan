@@ -20,7 +20,7 @@ export function Logo({ className }: { className?: string }) {
           group-hover:-rotate-2"
       >
         <Image
-          src="public/products/logo.png"
+          src="/products/logo.png"
           alt="Kaptan Leather"
           fill
           sizes="56px"
@@ -40,7 +40,7 @@ export function Logo({ className }: { className?: string }) {
           KAPTAN
         </span>
         <span
-          className="mt-2 inline-block w-full border border-blood-glow/70 bg-blood/90
+          className="mt-0.5 inline-block w-full border border-blood-glow/70 bg-blood/90
             px-2.5 py-0.5 text-center text-[10px] font-bold uppercase tracking-ultra text-white
             transition-colors duration-200 group-hover:bg-blood-glow"
         >
