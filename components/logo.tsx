@@ -20,7 +20,7 @@ export function Logo({ className }: { className?: string }) {
           group-hover:-rotate-2"
       >
         <Image
-          src="/products/logo.png"
+          src="public/products/logo.png"
           alt="Kaptan Leather"
           fill
           sizes="56px"
@@ -35,7 +35,7 @@ export function Logo({ className }: { className?: string }) {
           data-text="KAPTAN"
           className="logo-glitch font-display text-xl uppercase tracking-[0.05em] text-bone
             [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
-            sm:text-3xl sm:tracking-[1em]"
+            sm:text-3xl sm:tracking-[0.08em]"
         >
           KAPTAN
         </span>
