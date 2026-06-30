@@ -93,12 +93,42 @@ body {
   }
 }
 
-/* hide number input spinners */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Brutalist logo glitch effect */
+.logo-glitch {
+  position: relative;
+  display: inline-block;
 }
-input[type="number"] {
-  -moz-appearance: textfield;
+.logo-glitch::before,
+.logo-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.group:hover .logo-glitch::before {
+  color: #e63946;
+  opacity: 0.85;
+  animation: glitch-1 0.35s steps(2, end) infinite;
+}
+.group:hover .logo-glitch::after {
+  color: #2fd3e6;
+  opacity: 0.85;
+  animation: glitch-2 0.35s steps(2, end) infinite;
+}
+@keyframes glitch-1 {
+  0% { transform: translate(0, 0); clip-path: inset(0 0 70% 0); }
+  50% { transform: translate(-3px, 1px); clip-path: inset(40% 0 20% 0); }
+  100% { transform: translate(2px, -1px); clip-path: inset(10% 0 60% 0); }
+}
+@keyframes glitch-2 {
+  0% { transform: translate(0, 0); clip-path: inset(60% 0 5% 0); }
+  50% { transform: translate(3px, -1px); clip-path: inset(10% 0 50% 0); }
+  100% { transform: translate(-2px, 1px); clip-path: inset(50% 0 15% 0); }
+}
+@keyframes scan-sweep {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+.group:hover .logo-scan {
+  animation: scan-sweep 0.9s linear infinite;
 }

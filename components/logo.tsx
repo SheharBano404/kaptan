@@ -7,22 +7,43 @@ export function Logo({ className }: { className?: string }) {
     <Link
       href="/"
       aria-label="Kaptan Leather home"
-      className={cn("group flex items-center gap-2.5", className)}
+      className={cn("group flex items-center gap-3.5", className)}
     >
-      <span className="relative grid h-12 w-12 place-items-center overflow-hidden rounded-md bg-blood text-white shadow-[0_0_20px_-6px_theme(colors.blood.glow)] transition-transform duration-300 group-hover:rotate-[-8deg]">
+      {/* Image block — sharp brutalist edges, hard offset shadow */}
+      <span
+        className="relative grid h-16 w-16 shrink-0 place-items-center overflow-hidden
+          border-2 border-bone bg-ink-card
+          shadow-[5px_5px_0_0_theme(colors.blood.DEFAULT)]
+          transition-all duration-200 ease-out
+          group-hover:-translate-x-0.5 group-hover:-translate-y-0.5
+          group-hover:shadow-[8px_8px_0_0_theme(colors.blood.glow)]
+          group-hover:-rotate-2"
+      >
         <Image
           src="/products/spiked-rebel.jpeg"
           alt="Kaptan Leather"
           fill
-          sizes="48px"
-          className="object-cover"
+          sizes="64px"
+          className="object-cover transition-transform duration-300 group-hover:scale-110"
         />
+        {/* scanline sweep on hover */}
+        <span className="logo-scan pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-blood-glow/0 via-blood-glow/40 to-blood-glow/0" />
       </span>
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-2xl tracking-tight text-bone [text-shadow:0_0_12px_theme(colors.blood.glow),0_0_24px_theme(colors.blood.DEFAULT)] transition-[text-shadow] duration-300 group-hover:[text-shadow:0_0_18px_theme(colors.blood.glow),0_0_36px_theme(colors.blood.glow),0_0_54px_theme(colors.blood.DEFAULT)]">
+
+      <span className="flex flex-col leading-[0.85]">
+        <span
+          data-text="KAPTAN"
+          className="logo-glitch font-display text-4xl uppercase tracking-tight text-bone
+            [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
+            sm:text-5xl"
+        >
           KAPTAN
         </span>
-        <span className="text-xs font-semibold uppercase tracking-ultra text-blood-glow">
+        <span
+          className="mt-1.5 inline-block w-fit border border-blood-glow/70 bg-blood
+            px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-ultra text-white
+            transition-colors duration-200 group-hover:bg-blood-glow"
+        >
           Leather
         </span>
       </span>
