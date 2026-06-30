@@ -103,7 +103,3 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* Logo mark — soft entrance highlight only, no gimmicks */
-.group:hover .logo-mark-glow {
-  opacity: 1;
-}
