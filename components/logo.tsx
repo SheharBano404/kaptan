@@ -11,7 +11,7 @@ export function Logo({ className }: { className?: string }) {
     >
       {/* Image block — sharp brutalist edges, hard offset shadow */}
       <span
-        className="relative grid h-16 w-16 shrink-0 place-items-center overflow-hidden
+        className="relative grid h-14 w-14 shrink-0 place-items-center overflow-hidden
           border-2 border-bone bg-ink-card
           shadow-[5px_5px_0_0_theme(colors.blood.DEFAULT)]
           transition-all duration-200 ease-out
@@ -23,19 +23,19 @@ export function Logo({ className }: { className?: string }) {
           src="/products/spiked-rebel.jpeg"
           alt="Kaptan Leather"
           fill
-          sizes="64px"
+          sizes="56px"
           className="object-cover transition-transform duration-300 group-hover:scale-110"
         />
         {/* scanline sweep on hover */}
         <span className="logo-scan pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-blood-glow/0 via-blood-glow/40 to-blood-glow/0" />
       </span>
 
-      <span className="flex flex-col items-stretch leading-[1]">
+      <span className="flex flex-col items-stretch leading-[0.85]">
         <span
           data-text="KAPTAN"
-          className="logo-glitch font-display text-xl uppercase tracking-tight text-bone
+          className="logo-glitch font-display text-xl uppercase tracking-wider text-bone
             [-webkit-text-stroke:1px_theme(colors.ink.DEFAULT)]
-            sm:text-4xl"
+            sm:text-3xl sm:tracking-widest"
         >
           KAPTAN
         </span>
