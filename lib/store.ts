@@ -55,7 +55,14 @@ async function kvSetJSON<T>(key: string, value: T): Promise<void> {
 }
 
 // ───────────────────────── Local JSON fallback ─────────────────────────
-const DATA_DIR = path.join(process.cwd(), ".data");
+// On Vercel (and most serverless platforms) the deployed filesystem is
+// read-only except for /tmp, so when no KV is configured we must write
+// there instead of process.cwd(). Note: /tmp is ephemeral per-instance,
+// so this is only a temporary fallback — connect a Redis/KV integration
+// on Vercel for persistent storage in production.
+const DATA_DIR = process.env.VERCEL
+  ? path.join("/tmp", ".data")
+  : path.join(process.cwd(), ".data");
 
 async function fileGetJSON<T>(key: string): Promise<T | null> {
   try {
